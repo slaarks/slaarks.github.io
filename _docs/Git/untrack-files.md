@@ -1,6 +1,7 @@
 ---
-title: GIT - Dejar de tracker archivos que ya fueron agregados al repositorio .git
-published: true
+title: Destrackear archivos
+category: Git
+order: 1
 ---
 
 A veces pasa que hacemos nuestro primer commit sin haber agregado un archivo `.gitignore` a nuestro proyecto, y comenzamos a tracker archivos que realmente no nos interesan como logs, clases compiladas, o archivos generados por nuestro IDE o nuestra herramienta de construcción.

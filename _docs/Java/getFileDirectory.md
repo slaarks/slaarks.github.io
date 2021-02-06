@@ -1,5 +1,5 @@
 ---
-title: Construir la ruta absoluta de un archivo
+title: getFileDirectory()
 category: Java
 order: 1
 ---

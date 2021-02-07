@@ -1002,7 +1002,7 @@ header > form {
       display: block; } }
 
 nav > ul {
-  padding: 10px 0; }
+  padding: 3.3333333333px 0; }
   nav > ul + ul {
     border-top: 1px solid rgba(0, 0, 0, 0.075); }
 
@@ -1019,7 +1019,7 @@ nav > ul {
     color: #ffffff;
     text-decoration: none;
     font-size: 1.4rem;
-    padding: 5px 0 5px 40px;
+    padding: 6.6666666667px 0 6.6666666667px 40px;
     display: block; }
   .nav-item.current > a,
   .nav-item > a:active,

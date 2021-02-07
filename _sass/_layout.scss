@@ -221,7 +221,7 @@ header > form {
 }
 
 nav > ul {
-	padding: $space / 2 0;
+	padding: $space / 6 0;
 
 	& + ul {
 		border-top: 1px solid rgba(0, 0, 0, 0.075);
@@ -246,7 +246,7 @@ nav > ul {
 		color: #ffffff;
 		text-decoration: none;
 		font-size: 1.4rem;
-		padding: $space / 4 0  $space / 4 $space * 2;
+		padding: $space / 3 0  $space / 3 $space * 2;
 		display: block;
 	}
 

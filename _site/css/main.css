@@ -1019,13 +1019,13 @@ nav > ul {
     color: #ffffff;
     text-decoration: none;
     font-size: 1.4rem;
-    padding: 0 0 10px 40px;
+    padding: 5px 0 5px 40px;
     display: block; }
   .nav-item.current > a,
   .nav-item > a:active,
   .nav-item > a:hover {
     color: #ffff00;
-    font-weight: bold; }
+    background-color: #2EA620; }
   .nav-item.top-level > a {
     line-height: 1.5;
     font-weight: 600;

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Destrackear archivos | Edition Template</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="Destrackear archivos" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A veces pasa que hacemos nuestro primer commit sin haber agregado un archivo .gitignore a nuestro proyecto, y comenzamos a tracker archivos que realmente no nos interesan como logs, clases compiladas, o archivos generados por nuestro IDE o nuestra herramienta de construcción." />
+<meta property="og:description" content="A veces pasa que hacemos nuestro primer commit sin haber agregado un archivo .gitignore a nuestro proyecto, y comenzamos a tracker archivos que realmente no nos interesan como logs, clases compiladas, o archivos generados por nuestro IDE o nuestra herramienta de construcción." />
+<link rel="canonical" href="http://0.0.0.0:8000/Git/untrack-files/" />
+<meta property="og:url" content="http://0.0.0.0:8000/Git/untrack-files/" />
+<meta property="og:site_name" content="Edition Template" />
+<script type="application/ld+json">
+{"description":"A veces pasa que hacemos nuestro primer commit sin haber agregado un archivo .gitignore a nuestro proyecto, y comenzamos a tracker archivos que realmente no nos interesan como logs, clases compiladas, o archivos generados por nuestro IDE o nuestra herramienta de construcción.","@type":"Article","url":"http://0.0.0.0:8000/Git/untrack-files/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://0.0.0.0:8000/siteicon.png"}},"headline":"Destrackear archivos","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		<link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:8000/feed.xml" title="Edition Template" />
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/images/favicon.png">
+
+		
+	</head>
+
+	<body>
+		<header>
+			<h1>
+				<a href="/"><img src="/images/emblem.svg" width="40" height="40" alt="Edition Template logo"></a>
+				Edition Template
+				<button type="button" class="open-nav" id="open-nav"></button>
+			</h1>
+
+			<form action="/search/" method="get">
+				<input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+				<input type="submit" value="Search" style="display: none;">
+			</form>
+
+			<nav class="full-navigation">
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/">Welcome</a>
+					</li>
+				</ul>
+
+				<ul>
+					
+					
+						<li class="nav-item top-level current">
+							
+							<a href="/Git/untrack-files/">Git</a>
+							<ul>
+								
+									<li class="nav-item current"><a href="/Git/untrack-files/">Destrackear archivos</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/Java/getFileDirectory/">Java</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/Java/getFileDirectory/">getFileDirectory()</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/contact-syncing/facebook/">Contact Syncing</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/contact-syncing/facebook/">Facebook</a></li>
+								
+									<li class="nav-item "><a href="/contact-syncing/phone/">Phone</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/devices/ios/">Devices</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/devices/ios/">iOS</a></li>
+								
+									<li class="nav-item "><a href="/devices/android/">Android</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/media/images/">Media</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/media/images/">Images</a></li>
+								
+									<li class="nav-item "><a href="/media/video/">Video</a></li>
+								
+									<li class="nav-item "><a href="/media/documents/">Documents</a></li>
+								
+							</ul>
+						</li>
+					
+				</ul>
+
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/changelog/">Change Log</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="main">
+			<div class="page-header">
+				<h2>Git</h2>
+				<h3>Destrackear archivos</h3>
+			</div>
+			<article class="content">
+				<p>A veces pasa que hacemos nuestro primer commit sin haber agregado un archivo <code class="highlighter-rouge">.gitignore</code> a nuestro proyecto, y comenzamos a tracker archivos que realmente no nos interesan como logs, clases compiladas, o archivos generados por nuestro IDE o nuestra herramienta de construcción.</p>
+
+<p>En el mejor de los casos, el fastidio se reduce a ver como git muestra como modificado el repositorio por el simple hecho de levantar el proyecto y generar archivos .log, en el peor de los casos, puede que ya ni levante debido a algún conflicto de configuraciones locales (de gradle por ejemplo).</p>
+
+<p>La solución es limpiar el repositorio .git, el problema es que a estas alturas, (aunque necesario) ya no es suficiente agregar el archivo <code class="highlighter-rouge">.gitignore</code>, proque los archivos ya fueron indexados, de modo que luego de agregar el archivo <code class="highlighter-rouge">.gitignore</code>, hay que sacar los archivos del repositorio .git y luego volver a meterlos, como esta vez ya habrá un archivo <code class="highlighter-rouge">.gitignore</code> actuando como filtro, solo volverán a entrar aquellos archivos que de hecho, necesitamos. El procedimiento es el siguiente:</p>
+
+<ul>
+  <li>
+    <p>Agrega un archivo .gitignore (puedes ocupar <a href="http://gitignore.io/">gitignore.io</a> para crear uno que se adapte a tus necesidades).</p>
+  </li>
+  <li>
+    <p>Saca todos los archivos del repositorio .git:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git <span class="nb">rm</span> <span class="nt">-r</span> <span class="nt">--cached</span> <span class="nb">.</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Opcionalmente puedes optar por sacar solo un archivo:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git <span class="nb">rm</span> <span class="nt">--cached</span> &lt;file&gt;
+</code></pre></div></div>
+
+<p>O solo una carpeta:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git <span class="nb">rm</span> <span class="nt">-r</span> <span class="nt">--cached</span> &lt;folder&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>Vuelve a agregar los archivos al repositorio .git, esta vez solo entrarán los que superen el filtro del archivo <code class="highlighter-rouge">.gitignore</code>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span>
+git commit <span class="nt">-am</span> <span class="s2">"Remove ignored files"</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Opcionalmente, puedes hacerlo todo en un solo paso:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git <span class="nb">rm</span> <span class="nt">-r</span> <span class="nt">--cached</span> <span class="nb">.</span> <span class="o">&amp;&amp;</span> git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-am</span> <span class="s2">"Remove ignored files"</span>
+</code></pre></div></div>
+
+<p>Nota que esto solo elimina los archivos de tu repositorio .git, pero puede que aún haya archivos basura en tu workspace estropeando algo. Sé que de seguro existe una solución más elegante, pero si quieres dejar tu workspace completamente limpio, puedes hacer un push al repositorio remoto luego de las operaciones anteriores, y después volver a clonarlo: como solo se irán los archivos que admite el <code class="highlighter-rouge">.gitignore</code>, el clon que recuperes, será una versión prístina de tu proyecto.</p>
+
+<p>Espero que este truco te sea de utilidad. ¡Hasta la próxima!</p>
+
+
+			</article>
+		</section>
+
+		<script>
+			document.getElementById("open-nav").addEventListener("click", function () {
+				document.body.classList.toggle("nav-open");
+			});
+		</script>
+	</body>
+</html>

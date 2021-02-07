@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>getFileDirectory() | Edition Template</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="getFileDirectory()" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="/ ├── pdf/ │ ├── contrato-de-servicios.pdf │ ├── terminos-y-condiciones.pdf │ └── aviso-de-privacidad.pdf └── aplicativo.jar A veces nuestros aplicativos requieren de ciertos archivos para operar, y suele ser más práctico no empaquetarlos como parte del jar porque de esa forma no hay que reempaquetar cuando algún archivo se actualice. El problema es que para poder utilizar recursos externos, necesitamos conocer su ubicación en el sistema de ficheros, y muchas veces ni siquiera sabemos en dónde correrá nuestro aplicativo." />
+<meta property="og:description" content="/ ├── pdf/ │ ├── contrato-de-servicios.pdf │ ├── terminos-y-condiciones.pdf │ └── aviso-de-privacidad.pdf └── aplicativo.jar A veces nuestros aplicativos requieren de ciertos archivos para operar, y suele ser más práctico no empaquetarlos como parte del jar porque de esa forma no hay que reempaquetar cuando algún archivo se actualice. El problema es que para poder utilizar recursos externos, necesitamos conocer su ubicación en el sistema de ficheros, y muchas veces ni siquiera sabemos en dónde correrá nuestro aplicativo." />
+<link rel="canonical" href="http://0.0.0.0:8000/Java/getFileDirectory/" />
+<meta property="og:url" content="http://0.0.0.0:8000/Java/getFileDirectory/" />
+<meta property="og:site_name" content="Edition Template" />
+<script type="application/ld+json">
+{"description":"/ ├── pdf/ │ ├── contrato-de-servicios.pdf │ ├── terminos-y-condiciones.pdf │ └── aviso-de-privacidad.pdf └── aplicativo.jar A veces nuestros aplicativos requieren de ciertos archivos para operar, y suele ser más práctico no empaquetarlos como parte del jar porque de esa forma no hay que reempaquetar cuando algún archivo se actualice. El problema es que para poder utilizar recursos externos, necesitamos conocer su ubicación en el sistema de ficheros, y muchas veces ni siquiera sabemos en dónde correrá nuestro aplicativo.","@type":"Article","url":"http://0.0.0.0:8000/Java/getFileDirectory/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://0.0.0.0:8000/siteicon.png"}},"headline":"getFileDirectory()","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		<link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:8000/feed.xml" title="Edition Template" />
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/images/favicon.png">
+
+		
+	</head>
+
+	<body>
+		<header>
+			<h1>
+				<a href="/"><img src="/images/emblem.svg" width="40" height="40" alt="Edition Template logo"></a>
+				Edition Template
+				<button type="button" class="open-nav" id="open-nav"></button>
+			</h1>
+
+			<form action="/search/" method="get">
+				<input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+				<input type="submit" value="Search" style="display: none;">
+			</form>
+
+			<nav class="full-navigation">
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/">Welcome</a>
+					</li>
+				</ul>
+
+				<ul>
+					
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/Git/untrack-files/">Git</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/Git/untrack-files/">Destrackear archivos</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level current">
+							
+							<a href="/Java/getFileDirectory/">Java</a>
+							<ul>
+								
+									<li class="nav-item current"><a href="/Java/getFileDirectory/">getFileDirectory()</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/contact-syncing/facebook/">Contact Syncing</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/contact-syncing/facebook/">Facebook</a></li>
+								
+									<li class="nav-item "><a href="/contact-syncing/phone/">Phone</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/devices/ios/">Devices</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/devices/ios/">iOS</a></li>
+								
+									<li class="nav-item "><a href="/devices/android/">Android</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/media/images/">Media</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/media/images/">Images</a></li>
+								
+									<li class="nav-item "><a href="/media/video/">Video</a></li>
+								
+									<li class="nav-item "><a href="/media/documents/">Documents</a></li>
+								
+							</ul>
+						</li>
+					
+				</ul>
+
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/changelog/">Change Log</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="main">
+			<div class="page-header">
+				<h2>Java</h2>
+				<h3>getFileDirectory()</h3>
+			</div>
+			<article class="content">
+				<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/
+├── pdf/
+│   ├── contrato-de-servicios.pdf
+│   ├── terminos-y-condiciones.pdf
+│   └── aviso-de-privacidad.pdf
+└── aplicativo.jar
+</code></pre></div></div>
+<p>A veces nuestros aplicativos requieren de ciertos archivos para operar, y suele ser más práctico no empaquetarlos como parte del jar porque de esa forma no hay que reempaquetar cuando algún archivo se actualice. El problema es que para poder utilizar recursos externos, necesitamos conocer su ubicación en el sistema de ficheros, y muchas veces ni siquiera sabemos en dónde correrá nuestro aplicativo.</p>
+
+<p>Para solucionar el problema anterior, te presento el siguiente truco que permite genrear las rutas absolutas de los archivos distribuídos junto con el jar:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.io.File</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">RandomMain</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		
+		<span class="n">String</span> <span class="n">rutaGenerada</span> <span class="o">=</span> <span class="n">getFileRoute</span><span class="o">(</span><span class="s">"pdf"</span><span class="o">,</span><span class="s">"terminos-y-condiciones.pdf"</span><span class="o">);</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Ruta generada: "</span> <span class="o">+</span> <span class="n">rutaGenerada</span><span class="o">);</span>
+
+	<span class="o">}</span>
+	
+	<span class="kd">private</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">getFileRoute</span><span class="o">(</span><span class="n">String</span> <span class="n">folder</span><span class="o">,</span> <span class="n">String</span> <span class="n">file</span><span class="o">)</span> <span class="o">{</span>
+		
+		<span class="n">StringBuilder</span> <span class="n">directory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="o">();</span>
+
+		<span class="k">try</span> <span class="o">{</span>
+			<span class="n">directory</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"."</span><span class="o">).</span><span class="na">getCanonicalFile</span><span class="o">().</span><span class="na">toString</span><span class="o">());</span>
+		<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+			<span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+		<span class="o">}</span>
+
+		<span class="n">directory</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">File</span><span class="o">.</span><span class="na">separator</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">folder</span><span class="o">);</span>
+		<span class="n">directory</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">File</span><span class="o">.</span><span class="na">separator</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
+		
+		<span class="k">return</span> <span class="n">directory</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+		
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Salida (depende del directorio y el sistema de archivos en el que se ejecute el aplicativo):</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ruta generada: E:\Root\Repos\Aplicativo\pdf\terminos-y-condiciones.pdf
+</code></pre></div></div>
+
+<p>Espero que esta técnica te sea de utilidad. ¡Hasta la próxima!</p>
+
+			</article>
+		</section>
+
+		<script>
+			document.getElementById("open-nav").addEventListener("click", function () {
+				document.body.classList.toggle("nav-open");
+			});
+		</script>
+	</body>
+</html>

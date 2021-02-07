@@ -1123,7 +1123,7 @@ h4 svg {
   line-height: 1.8; }
   #search-input:focus {
     outline: none;
-
+	}
 
 .changelog,
 .changelog > div {

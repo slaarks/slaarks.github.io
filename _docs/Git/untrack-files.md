@@ -1,5 +1,5 @@
 ---
-title: Desindexar archivos
+title: Des-indexar archivos
 category: Git
 order: 1
 ---

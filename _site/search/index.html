@@ -59,7 +59,7 @@
 							<a href="/Git/untrack-files/">Git</a>
 							<ul>
 								
-									<li class="nav-item "><a href="/Git/untrack-files/">Destrackear archivos</a></li>
+									<li class="nav-item "><a href="/Git/untrack-files/">Desindexar archivos</a></li>
 								
 							</ul>
 						</li>
@@ -69,45 +69,7 @@
 							<a href="/Java/getFileDirectory/">Java</a>
 							<ul>
 								
-									<li class="nav-item "><a href="/Java/getFileDirectory/">getFileDirectory()</a></li>
-								
-							</ul>
-						</li>
-					
-						<li class="nav-item top-level ">
-							
-							<a href="/contact-syncing/facebook/">Contact Syncing</a>
-							<ul>
-								
-									<li class="nav-item "><a href="/contact-syncing/facebook/">Facebook</a></li>
-								
-									<li class="nav-item "><a href="/contact-syncing/phone/">Phone</a></li>
-								
-							</ul>
-						</li>
-					
-						<li class="nav-item top-level ">
-							
-							<a href="/devices/ios/">Devices</a>
-							<ul>
-								
-									<li class="nav-item "><a href="/devices/ios/">iOS</a></li>
-								
-									<li class="nav-item "><a href="/devices/android/">Android</a></li>
-								
-							</ul>
-						</li>
-					
-						<li class="nav-item top-level ">
-							
-							<a href="/media/images/">Media</a>
-							<ul>
-								
-									<li class="nav-item "><a href="/media/images/">Images</a></li>
-								
-									<li class="nav-item "><a href="/media/video/">Video</a></li>
-								
-									<li class="nav-item "><a href="/media/documents/">Documents</a></li>
+									<li class="nav-item "><a href="/Java/getFileDirectory/">getFileDirectory</a></li>
 								
 							</ul>
 						</li>
@@ -117,7 +79,7 @@
 				<ul>
 					<li class="nav-item top-level ">
 						
-						<a href="/changelog/">Change Log</a>
+						<a href="/changelog/"></a>
 					</li>
 				</ul>
 			</nav>
@@ -142,7 +104,7 @@
 
 					"git-untrack-files": {
 						"id": "git-untrack-files",
-						"title": "Destrackear archivos",
+						"title": "Desindexar archivos",
 						"category": "",
 						"url": " /Git/untrack-files/",
 						"content": "A veces pasa que hacemos nuestro primer commit sin haber agregado un archivo .gitignore a nuestro proyecto, y comenzamos a tracker archivos que realmente no nos interesan como logs, clases compiladas, o archivos generados por nuestro IDE o nuestra herramienta de construcción. En el mejor de los casos, el fastidio se reduce a ver como git muestra como modificado el repositorio por el simple hecho de levantar el proyecto y generar archivos .log, en el peor de los casos, puede que ya ni levante debido a algún conflicto de configuraciones locales (de gradle por ejemplo). La solución es limpiar el repositorio .git, el problema es que a estas alturas, (aunque necesario) ya no es suficiente agregar el archivo .gitignore, proque los archivos ya fueron indexados, de modo que luego de agregar el archivo .gitignore, hay que sacar los archivos del repositorio .git y luego volver a meterlos, como esta vez ya habrá un archivo .gitignore actuando como filtro, solo volverán a entrar aquellos archivos que de hecho, necesitamos. El procedimiento es el siguiente: Agrega un archivo .gitignore (puedes ocupar gitignore.io para crear uno que se adapte a tus necesidades). Saca todos los archivos del repositorio .git: git rm -r --cached . Opcionalmente puedes optar por sacar solo un archivo: git rm --cached &lt;file&gt; O solo una carpeta: git rm -r --cached &lt;folder&gt; Vuelve a agregar los archivos al repositorio .git, esta vez solo entrarán los que superen el filtro del archivo .gitignore: git add . git commit -am \"Remove ignored files\" Opcionalmente, puedes hacerlo todo en un solo paso: git rm -r --cached . &amp;&amp; git add . &amp;&amp; git commit -am \"Remove ignored files\" Nota que esto solo elimina los archivos de tu repositorio .git, pero puede que aún haya archivos basura en tu workspace estropeando algo. Sé que de seguro existe una solución más elegante, pero si quieres dejar tu workspace completamente limpio, puedes hacer un push al repositorio remoto luego de las operaciones anteriores, y después volver a clonarlo: como solo se irán los archivos que admite el .gitignore, el clon que recuperes, será una versión prístina de tu proyecto. Espero que este truco te sea de utilidad. ¡Hasta la próxima!"
@@ -159,129 +121,10 @@
 
 					"java-getfiledirectory": {
 						"id": "java-getfiledirectory",
-						"title": "getFileDirectory()",
+						"title": "getFileDirectory",
 						"category": "",
 						"url": " /Java/getFileDirectory/",
-						"content": "├── pdf │ ├── contrato-de-servicios.pdf │ ├── terminos-y-condiciones.pdf │ └── aviso-de-privacidad.pdf └── aplicativo.jar A veces nuestros aplicativos requieren de ciertos archivos para operar, y suele ser más práctico no empaquetarlos como parte del jar porque de esa forma no hay que reempaquetar cuando algún archivo se actualice. El problema es que para poder utilizar recursos externos, necesitamos conocer su ubicación en el sistema de ficheros, y muchas veces ni siquiera sabemos en dónde correrá nuestro aplicativo. Para solucionar el problema anterior, te presento el siguiente truco que permite genrear las rutas absolutas de los archivos distribuídos junto con el jar: import java.io.File; import java.io.IOException; public class RandomMain { public static void main(String[] args) { String rutaGenerada = getFileRoute(\"pdf\",\"terminos-y-condiciones.pdf\"); System.out.println(\"Ruta generada: \" + rutaGenerada); } private static String getFileRoute(String folder, String file) { StringBuilder directory = new StringBuilder(); try { directory.append(new File(\".\").getCanonicalFile().toString()); } catch (IOException e) { e.printStackTrace(); } directory.append(File.separator).append(folder); directory.append(File.separator).append(file); return directory.toString(); } } Salida (depende del directorio y el sistema de archivos en el que se ejecute el aplicativo): Ruta generada: E:\\Root\\Repos\\Aplicativo\\pdf\\terminos-y-condiciones.pdf Espero que esta técnica te sea de utilidad. ¡Hasta la próxima!"
-					}
-
-					
-				
-			
-		
-			
-				
-					,
-					
-
-					"contact-syncing-facebook": {
-						"id": "contact-syncing-facebook",
-						"title": "Facebook",
-						"category": "",
-						"url": " /contact-syncing/facebook/",
-						"content": "Sync your Facebook contacts with ChatApp. Any of your Facebook friends with ChatApp accounts are automatically added to your contact list! Signing up with Facebook automatically starts syncing contacts. To sync your contacts: Open your User Settings Select the Connect Facebook button Authorise ChatApp"
-					}
-
-					
-				
-			
-		
-			
-				
-					,
-					
-
-					"contact-syncing-phone": {
-						"id": "contact-syncing-phone",
-						"title": "Phone",
-						"category": "",
-						"url": " /contact-syncing/phone/",
-						"content": "Sync your phone contacts with ChatApp. ChatApp saves your phone contacts and adds anyone with an email address to your contact list! Syncing contacts with your phone restores any previously synced contacts. To sync your contacts: Open your User Settings on your phone app Select the Sync Contacts button Authorise ChatApp permissions Select some or all of your contacts"
-					}
-
-					
-				
-			
-		
-			
-				
-					,
-					
-
-					"devices-android": {
-						"id": "devices-android",
-						"title": "Android",
-						"category": "",
-						"url": " /devices/android/",
-						"content": "Use ChatApp on all of your Android devices. Every version is supported. To install ChatApp on your device: Open the Google Play Store Search for ChatApp Select Install"
-					}
-
-					
-				
-			
-		
-			
-				
-					,
-					
-
-					"devices-ios": {
-						"id": "devices-ios",
-						"title": "iOS",
-						"category": "",
-						"url": " /devices/ios/",
-						"content": "Use ChatApp on most of your Apple devices. Only the latest versions are supported. To install ChatApp on your device: Open the App Store Search for ChatApp Select Install"
-					}
-
-					
-				
-			
-		
-			
-				
-					,
-					
-
-					"media-documents": {
-						"id": "media-documents",
-						"title": "Documents",
-						"category": "",
-						"url": " /media/documents/",
-						"content": "Share documents with your friends! Send work or school projects from your computer or phone. To share a document: Open a message with someone Select the Send Media button Pick a document Changes made to documents after sending are not saved back, you’ll have to get contacts to send you updated versions."
-					}
-
-					
-				
-			
-		
-			
-				
-					,
-					
-
-					"media-images": {
-						"id": "media-images",
-						"title": "Images",
-						"category": "",
-						"url": " /media/images/",
-						"content": "Share images with your friends! Send photos and pictures from your computer, phone or camera. Images are stored until you choose to remove them. To share an image: Open a message with someone Select the Send Media button Pick an image Supported types: JPEG PNG BMP GIF Unsupported types: SVG WEBP"
-					}
-
-					
-				
-			
-		
-			
-				
-					,
-					
-
-					"media-video": {
-						"id": "media-video",
-						"title": "Video",
-						"category": "",
-						"url": " /media/video/",
-						"content": "Share video to your friends! Send videos from your computer, phone, camera or YouTube. To share a video: Open a message with someone Select the Send Media button Pick a video or paste a YouTube link Videos can use up a lot of bandwidth so be aware of your mobile data."
+						"content": "Genera la ruta absoluta de un archivo a parir de su relación relativa con el aplcativo. import java.io.File; import java.io.IOException; public class RandomMain { public static void main(String[] args) { String rutaGenerada = getFileRoute(\"pdf\",\"terminos-y-condiciones.pdf\"); System.out.println(\"Ruta generada: \" + rutaGenerada); } private static String getFileRoute(String folder, String file) { StringBuilder directory = new StringBuilder(); try { directory.append(new File(\".\").getCanonicalFile().toString()); } catch (IOException e) { e.printStackTrace(); } directory.append(File.separator).append(folder); directory.append(File.separator).append(file); return directory.toString(); } } Salida (varía según el directorio y el sistema de archivos): Ruta generada: E:\\Root\\Repos\\Aplicativo\\pdf\\terminos-y-condiciones.pdf"
 					}
 
 					

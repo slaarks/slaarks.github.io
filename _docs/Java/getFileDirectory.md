@@ -1,20 +1,10 @@
 ---
-title: getFileDirectory()
+title: getFileDirectory
 category: Java
 order: 1
 ---
 
-```bash
-/
-├── pdf/
-│   ├── contrato-de-servicios.pdf
-│   ├── terminos-y-condiciones.pdf
-│   └── aviso-de-privacidad.pdf
-└── aplicativo.jar
-```
-A veces nuestros aplicativos requieren de ciertos archivos para operar, y suele ser más práctico no empaquetarlos como parte del jar porque de esa forma no hay que reempaquetar cuando algún archivo se actualice. El problema es que para poder utilizar recursos externos, necesitamos conocer su ubicación en el sistema de ficheros, y muchas veces ni siquiera sabemos en dónde correrá nuestro aplicativo.
-
-Para solucionar el problema anterior, te presento el siguiente truco que permite genrear las rutas absolutas de los archivos distribuídos junto con el jar:
+Genera la ruta absoluta de un archivo a parir de su relación relativa con el aplcativo.
 
 ```java
 import java.io.File;
@@ -48,10 +38,7 @@ public class RandomMain {
 }
 ```
 
-Salida (depende del directorio y el sistema de archivos en el que se ejecute el aplicativo):
+Salida (varía según el directorio y el sistema de archivos):
 ```
 Ruta generada: E:\Root\Repos\Aplicativo\pdf\terminos-y-condiciones.pdf
 ```
-
-
-Espero que esta técnica te sea de utilidad. ¡Hasta la próxima!

@@ -1,5 +1,5 @@
 ---
-title: Destrackear archivos
+title: Desindexar archivos
 category: Git
 order: 1
 ---

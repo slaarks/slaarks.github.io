@@ -1008,7 +1008,7 @@ nav > ul {
 
 .nav-item {
   display: block;
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  font-family: Verdana, sans-serif;
   line-height: 1;
   margin: 0; }
   nav:not(.full-navigation) .nav-item > ul {

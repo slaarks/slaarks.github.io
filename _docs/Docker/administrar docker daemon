@@ -1,9 +1,8 @@
 ---
-title: Administrar el demonio de docker
-category: Docker
+title: administrar demonio docker
+category: Java
 order: 1
 ---
-
 
 Revisar el estado del demonio de docker:
 ```bash

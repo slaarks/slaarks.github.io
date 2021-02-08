@@ -1,0 +1,19 @@
+Revisar el estado del demonio de docker:
+```bash
+systemctl status docker
+```
+
+Arrancar el demonio de docker:
+```bash
+systemctl start docker
+```
+
+Detener el demonio de docker:
+```bash
+systemctl stop docker
+```
+
+Arrancar automáticamente el demonio de docker en el inicio del sistema:
+```bash
+systemctl enable docker
+```

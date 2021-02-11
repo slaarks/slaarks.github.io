@@ -4,6 +4,16 @@ category: Docker
 order: 1
 ---
 
+Versión de docker (es diferente de docker --version):
+```bash
+docker version
+```
+
+Detalles del docker instalado:
+```bash
+docker info
+```
+
 Revisar el estado del demonio de docker:
 ```bash
 systemctl status docker
@@ -22,4 +32,11 @@ systemctl stop docker
 Arrancar el demonio de docker junto con el sistema:
 ```bash
 systemctl enable docker
+```
+
+Ejecutar comandos docker sin sudo (logout-login luego de ejecutar):
+```bash
+sudo group add docker
+sudo usermod -aG docker $USER
+newgrp docker
 ```

@@ -1,5 +1,5 @@
 ---
-title: Gestionar el demonio de docker
+title: Gestionar docker
 category: Docker
 order: 1
 ---

@@ -34,9 +34,9 @@ Arrancar el demonio de docker junto con el sistema:
 systemctl enable docker
 ```
 
-Ejecutar comandos docker sin sudo (logout-login luego de ejecutar):
+Ejecutar comandos docker sin sudo:
 ```bash
-sudo group add docker
+sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
 ```

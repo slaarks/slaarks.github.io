@@ -4,7 +4,7 @@ category: Docker
 order: 1
 ---
 
-Versión de docker (es diferente de docker --version):
+Versión de docker (es diferente de `docker --version`):
 ```bash
 docker version
 ```

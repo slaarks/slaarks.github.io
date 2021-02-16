@@ -9,9 +9,9 @@ order: 1
 | Versión de docker | `docker version` |
 | Detalles del docker instalado | `docker info` |
 | Estado del demonio de docker | `systemctl status docker` |
-| Iniciar del demonio de docker | `systemctl start docker` |
-| Detener del demonio de docker | `systemctl stop docker` |
-| Iniciar del demonio de docker con el sistema | `systemctl enable docker` |
+| Iniciar el demonio de docker | `systemctl start docker` |
+| Detener el demonio de docker | `systemctl stop docker` |
+| Iniciar el demonio de docker junto con el sistema | `systemctl enable docker` |
 
 
 Ejecutar comandos docker sin sudo:

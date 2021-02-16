@@ -4,7 +4,6 @@ category: Docker
 order: 2
 ---
 
-| USO | COMANDO |
 |---|---|
 | `--name` [NOMBRE] Nombre del contenedor| `ubuntu` Imagen oficial con etiqueta latest |
 | `-it` / `-d` Contenedor interactivo / Contenedor en segundo plano | `ubuntu:trusty` Imagen oficial con etiqueta X |

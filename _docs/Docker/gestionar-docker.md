@@ -7,7 +7,7 @@ order: 1
 | USO | COMANDO |
 |---|---|
 | Versión de docker | `docker version` |
-| Detalles del docker instalad | `docker info` |
+| Detalles del docker instalado | `docker info` |
 | Estado del demonio de docker | `systemctl status docker` |
 | Iniciar del demonio de docker | `systemctl start docker` |
 | Detener del demonio de docker | `systemctl stop docker` |

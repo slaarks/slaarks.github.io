@@ -253,8 +253,8 @@ nav > ul {
 	&.current > a,
 	> a:active,
 	> a:hover {
-		color: #1a1a1a;
-		background-color:#e6e6e6;
+		color: #ffffff;
+		background-color:#404040;
 	}
 
 	&.top-level > a {
@@ -454,8 +454,8 @@ img {
 		box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
 
 		&:hover {
-			background-color: #e6e6e6;
-			color: #333;
+			background-color: #404040;
+			color: #ffffff;
 		}
 	}
 

@@ -4,7 +4,7 @@ category: Java
 order: 1
 ---
 
-Genera la ruta absoluta de un archivo a parir de su relación relativa con el ejecutable.
+Generar la ruta absoluta de un archivo a parir de su relación relativa con el ejecutable.
 
 ```java
 import java.io.File;

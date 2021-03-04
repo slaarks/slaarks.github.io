@@ -10,6 +10,7 @@ order: 1
 | Detalles del docker instalado | `docker info` |
 | Estado del demonio de docker | `systemctl status docker` |
 | Iniciar el demonio de docker | `systemctl start docker` |
+| Reiniciar el demonio de docker | `systemctl restart docker` |
 | Detener el demonio de docker | `systemctl stop docker` |
 | Iniciar el demonio de docker junto con el sistema | `systemctl enable docker` |
 

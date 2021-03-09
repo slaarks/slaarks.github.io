@@ -35,7 +35,7 @@ table {
 	-moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
 	-o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
 	font-family: "Open Sans", sans-serif;
-	text-rendering: geometricPrecision;
+	text-rendering: optimizeLegibility;
 }
 
 h1,

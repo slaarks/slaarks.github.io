@@ -31,13 +31,9 @@ pre {
 
 blockquote > code,
 li > code,
+td > code,
 p > code {
+	background-color: ForestGreen;
 	padding: 4px 6px;
 	white-space: nowrap;
-}
-
-td > code {
-	padding: 4px 6px;
-	white-space: nowrap;
-	background-color: coral;
 }

@@ -6,13 +6,13 @@ order: 1
 
 | USO | COMANDO |
 |---|---|
-| Versión de docker | `docker version` |
-| Detalles del docker instalado | `docker info` |
-| Estado del demonio de docker | `systemctl status docker` |
-| Iniciar el demonio de docker | `systemctl start docker` |
-| Reiniciar el demonio de docker | `systemctl restart docker` |
-| Detener el demonio de docker | `systemctl stop docker`
-| Iniciar el demonio de docker junto con el sistema | `systemctl enable docker` |
+| **Versión** de docker | `docker version` |
+| **Detalles** del docker instalado | `docker info` |
+| **Estado** del demonio de docker | `systemctl status docker` |
+| **Iniciar** el demonio de docker | `systemctl start docker` |
+| **Reiniciar** el demonio de docker | `systemctl restart docker` |
+| **Detener** el demonio de docker | `systemctl stop docker`
+| **Iniciar** el demonio de docker **junto con el sistema** | `systemctl enable docker` |
 
 
 Ejecutar comandos docker sin sudo:

@@ -16,7 +16,7 @@ Exec=COMANDO
 Icon=RUTA_ICONO
 ```
 
-## Ejemplo (launcher para Telegram):
+### Ejemplo (launcher para Telegram):
 
 ARCHIVO: `/usr/share/applications/Telegram.desktop`
 

@@ -12,7 +12,7 @@ order: 1
 Type=Application
 Categories=CATEGORÍAS;
 Name=NOMBRE_VISIBLE
-Exec=RUTA_EJECUTABLE
+Exec=COMANDO
 Icon=RUTA_ICONO
 ```
 

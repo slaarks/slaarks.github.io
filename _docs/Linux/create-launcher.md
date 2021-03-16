@@ -12,9 +12,11 @@ order: 1
 Type=Application
 Categories=CATEGORÍAS;
 Name=NOMBRE_VISIBLE
-Exec=COMANDO
+Exec=RUTA_EJECUTABLE -- %u
 Icon=RUTA_ICONO
 ```
+
+El modificador -- %u indica que la ruta será tratada como una URL. 
 
 ### Ejemplo (launcher para Telegram):
 

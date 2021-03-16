@@ -1,5 +1,5 @@
 ---
-title: create launcher
+title: crear launcher
 category: Linux
 order: 1
 ---

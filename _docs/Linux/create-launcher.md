@@ -5,7 +5,7 @@ order: 1
 ---
 
 - Mover la carpeta de la aplicacion a `/opt` (directorio de Linux para aplicaciones de terceros).
-- Crear el archivo `NOMBRE_APP.desktop` dentro del directorio `/usr/share/applications`, con el siguiente contenido:
+- Crear el archivo `NOMBRE_APP.desktop` dentro del directorio `/usr/share/applications` con el siguiente contenido:
 
 ```bash
 [Desktop Entry]
